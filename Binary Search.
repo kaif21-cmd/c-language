@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int ar[20],n,low,up,mid,i,item;
+    printf("How many no you want to store\n");
+    scanf("%d",&n);
+    printf("Enter the %d element one by one\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&ar[i]);
+    printf("arrays element are given below\n");
+    for(i=0;i<n;i++)
+        printf("%d",ar[i]);
+    printf("\n Enter the element which you want to search\n");
+    scanf("%d",&item);
+    low=0;
+    up=n-1;
+    while(low<=up&&ar[mid]!=item)
+    {
+        mid=(low+up)/2;
+        if(item>ar[mid])
+            low=mid+1;
+        if(item<ar[mid])
+            up=mid-1;
+        if(item==ar[mid])
+            printf("%d found at position %d",item,mid+1);
+        if(low>up)
+            printf("%d not found in arrays",item);
+    }
+}
