@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+
+    int ar[20],i,x,n;
+    printf("how many element you want to store\n");
+    scanf("%d",&n);
+    printf("Enter the element one by one\n",n);
+    for(i=0;i<n;i++)
+    scanf("%d",&ar[i]);
+    printf("\n Enter the element which you want to search\n");
+    scanf("%d",&x);
+    for(i=0;i<n;i++)
+
+    if(ar[i]==x)
+    break;
+    if(i<n)
+    printf("Element is found at index%d",i);
+    else
+    printf("Element not found");
+}
